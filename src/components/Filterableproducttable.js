@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchBar from './Searchbar';
 import ProductTable from './Producttable';
+import Productrow from './Productrow';
 
 class FilterableProductTable extends React.Component {
   render() {
@@ -8,7 +9,7 @@ class FilterableProductTable extends React.Component {
       <div>
         <h1>Iron Store</h1>
         <SearchBar></SearchBar>
-        <ProductTable></ProductTable>
+        <ProductTable productlist={this.props.products}></ProductTable>
       </div>
     );
   }
