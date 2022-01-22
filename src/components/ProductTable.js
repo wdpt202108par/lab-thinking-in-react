@@ -5,8 +5,17 @@ class ProductTable extends React.Component {
 
   render() {
     return (
-      <div>
-      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          {this.props.products.map(product => <ProductRow key={product.name} product={product} />)}
+        </tbody>
+      </table>
     );
   }
 }

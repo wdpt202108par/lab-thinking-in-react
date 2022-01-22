@@ -3,12 +3,18 @@ import FilterableProductTable from './components/FilterableProductTable';
 import jsondata from './data.json';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <FilterableProductTable products={ jsondata.data } />
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    products: jsondata.data
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <FilterableProductTable products={ this.state.products } />
+      </div>
+    );
+  }
 }
 
 export default App;
