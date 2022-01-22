@@ -2,7 +2,8 @@ import React from "react";
 
 class SearchBar extends React.Component {
   state = {
-    query: ""
+    query: "",
+    filterChecked: false
   }
 
   updateQuery = (event) => {
@@ -10,17 +11,29 @@ class SearchBar extends React.Component {
       query: event.target.value.toLowerCase()
     });
 
-    this.props.filterProducts(this.state.query);
+    this.props.filterProducts(this.state.query, this.state.filterChecked);
+  }
+
+  updateFilter = () => {
+    this.setState({ 
+        filterChecked: !this.filterChecked 
+      })
+
+      this.props.filterProducts(this.state.query, this.state.filterChecked);
   }
 
   render() {
     return (
       <div>
-        <label>Search</label>
-        <input type="text" name="search" value={this.state.query} onChange={(e) => this.updateQuery(e)} />
-        
-        <input type="checkbox" name="isOnStock" />
-        <label>Only show products on stock</label>
+        <form onChange={(e) => this.updateQuery(e)}>
+          <label>Search</label>
+          <input type="text" name="search" value={this.state.query}  />
+        </form>
+
+        <form onChange={this.updateFilter}>
+          <input type="checkbox" name="isOnStock" />
+          <label>Only show products on stock</label>
+        </form>
       </div>
     );
   }

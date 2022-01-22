@@ -7,9 +7,13 @@ class FilterableProductTable extends React.Component {
     products: [...this.props.products]
   }
 
-  filterProducts = (query) => {
+  filterProducts = (query, stockFilter) => {
     let productsCopy = [...this.props.products];
     let filteredProducts = productsCopy.filter(product => product.name.toLowerCase().includes(query));
+
+    if (stockFilter) {
+      filteredProducts.filter(product => product.stocked)
+    }
 
     this.setState({
       products: filteredProducts

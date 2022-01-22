@@ -13,7 +13,7 @@ class ProductTable extends React.Component {
           </tr>
         </thead>
         <tbody>
-          {this.props.products.map(product => <ProductRow key={product.name} product={product} />)}
+          {this.props.products.map(product => <ProductRow key={product.id} product={product} />)}
         </tbody>
       </table>
     );
