@@ -1,5 +1,5 @@
 import React from 'react';
-import jsondata from '../data.json'
+import jsondata from './data.json'
 import './App.css';
 
 import FilterableProductTable from './Components/FilterableProductTable';
