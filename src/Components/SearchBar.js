@@ -12,7 +12,7 @@ class SearchBar extends React.Component{
      this.setState({
          query: val
      })
-     //this.props.SearchBar(val)
+     this.props.searchBar(val)
     }
 
     render(){
