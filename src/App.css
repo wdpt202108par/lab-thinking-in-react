@@ -36,3 +36,50 @@
     transform: rotate(360deg);
   }
 }
+
+/* SEARCHBAR */
+
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 80px;
+}
+
+#header-search {
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px solid #005CC8;
+}
+
+.search-bar form {
+  display: flex;
+  padding: 10px 0;
+}
+
+.search-bar p {
+  margin: 0 5px;
+  color: #005CC8;
+  font-size: 90%;
+}
+
+
+/* TABLE */
+
+table {
+  margin: auto;
+}
+
+td {
+  border-top: 1px solid #005dc8da;
+  padding: 5px 170px
+}
+
+thead {
+  background: #005dc8da;
+  color: white;
+  height: 30px;
+}
+
+.row {
+  color: grey;
+}
