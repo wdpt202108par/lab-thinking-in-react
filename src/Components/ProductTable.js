@@ -17,7 +17,7 @@ class ProductTable extends React.Component {
                     {this.props.data.map(product=>{
                         return(
 
-                            <ProductRow  key={product.id} details={product}/>
+                            <ProductRow  key={product.id} name={product.name} price={product.price} stocked={product.stocked}/>
                             
                         )
                     })}

@@ -5,14 +5,15 @@ import React from "react";
 
 class ProductRow extends React.Component {
     render(){
-        const details = this.props
+        
         return(
             <>
               
                         <tr>
                        
-                            <td>{details.name}</td>
-                            <td>{details.price}</td>
+                            <td style={this.props.stocked? {color: 'black'}: {color: 'red'}}>{this.props.name}</td>
+
+                            <td>{this.props.price}</td>
                         </tr>
                     
                 
