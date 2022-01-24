@@ -2,7 +2,7 @@ import React from 'react';
 import ProductRow from './ProductRow';
 
 class ProductTable extends React.Component {
-  render () {
+  render () { 
     return (
       <table>
         <thead>
@@ -14,7 +14,14 @@ class ProductTable extends React.Component {
         <tbody>
         {this.props.productsTab.map((item => {
           return (
-            <ProductRow key={item.id} name={item.name} price={item.price}/>          
+            <>
+              {
+                item.stocked ?
+                <ProductRow key={item.id} name={item.name} price={item.price}/>
+                :
+                <ProductRow className='row' key={item.id} name={item.name} price={item.price}/>
+              }
+            </>
           )
         }))
         }
