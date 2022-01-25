@@ -6,22 +6,21 @@ class ProductTable extends React.Component {
   render() {
     return (
       <div>
-        <table>
-          <thead></thead>
+        <table className="ProductList">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Price</th>
+            </tr>
+          </thead>
           <tbody>
             <tr>
               <td>
-                <tr>
-                  <th colspan="2">Name</th>
-                </tr>
                 {this.props.productlist.map((el) => (
                   <Productrow key={el.id} name={el.name}></Productrow>
                 ))}
               </td>
               <td>
-                <tr>
-                  <th colspan="2">Price</th>
-                </tr>
                 {this.props.productlist.map((el) => (
                   <Productrow key={el.id} price={el.price}></Productrow>
                 ))}

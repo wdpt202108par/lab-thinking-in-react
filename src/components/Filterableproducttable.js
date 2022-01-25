@@ -7,7 +7,7 @@ class FilterableProductTable extends React.Component {
   render() {
     return (
       <div>
-        <h1>Iron Store</h1>
+        <h1>IronStore</h1>
         <SearchBar></SearchBar>
         <ProductTable productlist={this.props.products}></ProductTable>
       </div>
