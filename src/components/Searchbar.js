@@ -2,7 +2,14 @@ import React from 'react';
 
 class SearchBar extends React.Component {
   render() {
-    return <div>Search bar should be here</div>;
+    return (
+      <div>
+        <input className="SearchBox" type="text" placeholder="Search" 
+                value={this.props.query}
+                onChange={(event) => {this.props.setQuery(event.target.value)}}
+                />
+      </div>
+    )
   }
 }
 
